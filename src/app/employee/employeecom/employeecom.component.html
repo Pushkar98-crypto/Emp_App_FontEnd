@@ -1,0 +1,116 @@
+
+    <div class="row">
+        <div class="col-3">
+          <div class="sidebar text-center container-fluid " style="background-color:#111743; color:blanchedalmond; height:1000px">
+           <img src="https://image.flaticon.com/icons/png/128/1358/1358600.png">
+           <h3>STAFF-dsk</h3>    
+           
+           <hr style="background-color:blanchedalmond" width="100%">  
+
+           <br>
+           <br>
+           <button style="width:150px;"><a class="nav-link " href="#">AboutUs</a></button>
+           <br>
+           <br>
+           <button><a class="nav-link " href="#">Announcemnts</a></button>
+         
+          </div>
+   
+           
+   
+        </div>
+        <div class="col-9">
+            
+
+                  <br>
+                  <br>
+
+               <div class="data_area container">
+
+
+
+                <div class="table_head" style="width: 100%;">
+                    <h3>Employee Data</h3>
+                    <hr style="background-color:#111743 ; height: 700px; height: 3px;">
+                    <br>
+                </div>
+                <table class="container" style="border: 1px solid #111743; font-family:'Amiri', serif">
+                    <tr style="background-color: #111743; color: blanchedalmond;">
+                      <th>S.no</th>
+                      <th>Name</th>
+                      <th>Email</th>
+                      <th>Emp_Id</th>
+                      <th>Department</th>
+                      <th>Password</th>
+                      <th>Date of Joining</th>
+           
+           
+                    </tr>
+                    <tbody>
+                        <tr>
+                           <td>{{1}}</td>
+                           <td>{{specificdata.empName}}</td>
+                           <td>{{specificdata.email}}</td>
+                           <td>{{specificdata.empid}}</td>
+                           <td>{{specificdata.department}}</td>
+                           <td>{{specificdata.password}}</td>
+                           <td>{{specificdata.dateofJoin}}</td>
+           
+           
+                        </tr>
+                    </tbody>
+                </table>
+
+                <br>
+                <br>
+                <br>
+                <div class="table_head">
+                    <h3>Update Details</h3>
+                    <hr style="background-color:#111743 ; height: 700px; height: 3px;">
+                    <br>
+
+                </div>
+
+                
+                <div class="mb-2">
+                    <label  class="form-label">Name of the Employee</label>
+                    <input type="text" class="form-control"   [(ngModel)]="nam">
+                   
+                  </div>
+                  <div class="mb-2">
+                    <label  class="form-label">Email</label>
+                    <input type="text" class="form-control"  [(ngModel)]="mail">
+                  </div>
+                  <div class="mb-2">
+                      <label class="form-label">Employee ID</label>
+                      <input type="text" class="form-control"  readonly [(ngModel)]="id">
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label">Department</label>
+                        <input type="text" class="form-control"  [(ngModel)]="desig">
+                      </div>
+                    
+                      <div class="mb-2">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control" readonly [(ngModel)]="passw">
+                      </div>
+                    
+                 
+                        
+                 
+               </div>
+               <div class="updating" style="text-align: center;" >
+                <button class="btn btn-primary" (click)="updating(this.id)" style="height: 50px; height: 90px;">Update</button>
+              </div>
+           
+   
+   
+   
+               
+              
+               
+              </div>
+           
+        </div>
+   
+        

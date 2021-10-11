@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
+.sidebar img
+{
+    height: 90px;
+    width:90px;
+}
+.sidebar h3
+{
+    font-family: 'Amiri', serif;
+    color: blanchedalmond;
+
+}
+.sidebar button
+{
+    background:#111743;
+     font-family: 'Amiri', serif;
+    margin-right: 20px;
+    color:blanchedalmond;
+    border:none;
+    border-radius: 9px;
+    font-weight:bold;
+    font-size:20px;
+    height: 70px;
+    width: 190px;
+}
+.adding button{
+    background:#111743;
+     font-family: 'Amiri', serif;
+    margin-right: 20px;
+    color:blanchedalmond;
+    border:none;
+    border-radius: 9px;
+    font-weight:bold;
+    font-size:20px;
+    height: 30px;
+    width: 100px;
+}
+.updating button{
+    background:#111743;
+     font-family: 'Amiri', serif;
+    margin-right: 20px;
+    color:blanchedalmond;
+    border:none;
+    border-radius: 9px;
+    font-weight:bold;
+    font-size:20px;
+    height: 30px;
+    width: 100px;
+}
+.heading h3{
+   color: #111743;
+   font-family: 'Amiri', serif;
+   
+}
+.table_head
+{
+    color: #111743;
+   font-family: 'Amiri', serif;
+   
+}

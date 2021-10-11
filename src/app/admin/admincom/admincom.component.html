@@ -1,0 +1,126 @@
+
+    <div class="row">
+     <div class="col-3">
+       <div class="sidebar text-center container-fluid " style="background-color:#111743; color:blanchedalmond; height:1000px">
+        <img src="https://image.flaticon.com/icons/png/128/1358/1358600.png">
+        <h3>STAFF-Dsk</h3>    
+        <hr style="background-color:blanchedalmond" width="100%">  
+
+        <br>
+        <br>
+        <button style="width:150px;"><a class="nav-link " href="#">AboutUs</a></button>
+        <br>
+        <br>
+        <button><a class="nav-link " href="#">Announcemnts</a></button>
+      
+       </div>
+
+        
+
+     </div>
+     <div class="col-9">
+         <br>
+         <br>
+       
+           <div class="heading">
+               <h3>Employee Details</h3>
+               <hr style="background-color:#111743 ; height: 700px; height: 3px;">
+               </div>
+            <div class="data_area container">
+              <div [formGroup]="addForm" class="addingEmpForm " (ngSubmit)="submit()">
+                          <div class=" form-group mb-2">
+                              <label  class="form-label">Name of the Employee</label>
+                              <input type="text" class="form-control"   formControlName="empName">
+                            
+                            
+                            </div>
+
+                            <div class="  form-group mb-2">
+                              <label class="form-label">Department</label>
+                              <input type="text" class="form-control"  formControlName="department">
+                            </div>
+
+                            <div class=" form-group mb-2">
+                              <label  class="form-label">Date of Joining</label>
+                              <input type="text" class="form-control"   formControlName="dateofJoin">
+                          
+                            
+                            </div>
+
+                            <div class=" form-group mb-2">
+                              <label  class="form-label">Email</label>
+                              <input type="text" class="form-control" formControlName="email">
+                            
+                            </div>
+                
+                            
+                              
+                                <div class="form-group mb-2">
+                                  <label class="form-label">Password</label>
+                                  <input type="password" class="form-control" formControlName="password">
+                                
+                                </div>
+                              
+                                <br>
+                                <div class="form-group mb-2">
+
+                            <div class="adding" *ngIf="visible" style="text-align: center;">
+                                <button class="addbtn" (click)="submit()">ADD</button>
+                            </div>
+                                  
+                            </div>
+                            <div class="form-group mb-2">
+                            <div class="updating" *ngIf="!visible" style="text-align: center;">
+                              <button class="btn btn-primary" (click)="updating()">Update</button>
+                            </div>
+                        </div>
+                 </div>
+                
+             </div>
+            <br>
+            <br>
+
+
+
+            <div class="table_head" style="width: 100%;">
+                <h3>Employee Data</h3>
+                <hr style="background-color:#111743 ; height: 700px; height: 3px;">
+                <br>
+            </div>
+            <table class="container" style="border: 1px solid #111743; font-family:'Amiri', serif">
+                <tr style="background-color: #111743; color: blanchedalmond;">
+                    <th>S.no</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Emp_Id</th>
+                    <th>Department</th>
+                    <th>Password</th>
+                    <th>Date of Joining</th>
+                    <th>Action</th>
+       
+       
+                </tr>
+                <tbody>
+                    <tr   *ngFor="let val of employeeInfo, let i=index"   >
+                       <td (click)="send(val)" style="cursor: pointer;">{{i+1}}</td>
+                       <td (click)="send(val)" style="cursor: pointer;">{{val.empName}}</td>
+                       <td (click)="send(val)" style="cursor: pointer;">{{val.email}}</td>
+                       <td (click)="send(val)" style="cursor: pointer;">{{val.empid}}</td>
+                       <td (click)="send(val)" style="cursor: pointer;">{{val.department}}</td>
+                       <td (click)="send(val)" style="cursor: pointer;">{{val.password}}</td>
+                       <td (click)="send(val)"  style="cursor: pointer;">{{val.dateofJoin}}</td>
+                     
+                     
+                   
+                       <td><button type="button" class=" btn btn-danger" (click)="delete(this.val.empid)">Del</button>&nbsp;&nbsp;<button type="button" class="btn btn-info" (click)="edit(this.val.empid)">Edit</button></td>
+       
+       
+                    </tr>
+                </tbody>
+            </table>
+            
+           </div>
+        
+     </div>
+
+     

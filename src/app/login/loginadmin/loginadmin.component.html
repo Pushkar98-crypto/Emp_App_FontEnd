@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand-lg mynav d-flex justify-content-between">
+
+    <div class="container">
+      <a class="navbar-brand mybrand" href="#"><img src="https://image.flaticon.com/icons/png/128/1358/1358600.png">STAFF-Dsk</a>
+    </div>
+      <div class="collapse navbar-collapse rightside" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto ">
+          <li class="nav-item">
+            <button><a class="nav-link " href="#">AboutUs</a></button>
+        </li>
+        <li class="nav-item">
+        <button><a class="nav-link" href="#">Announcemnts</a></button>
+          </li>
+         
+        
+        </ul>
+        
+      </div>
+    
+  </nav>
+
+  <hr style="background-color:#111743 ; width: 900px;">
+
+  <br>
+  <br>
+
+
+  <div class="main_content container">
+    <div class="row">
+        <div class="col-6 ">
+          <div class="main_text">
+            <div class="mb-2">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control"   [(ngModel)]="email">
+               
+              </div>
+              <div class="mb-2">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control"  [(ngModel)]="pass">
+              </div>
+            
+          </div>
+          <br>
+         
+          <div class="main_con_btns d-flex ">
+            <button type="button" class="started btn btn-primary" (click)="adminlogin()">Login</button>
+            
+          </div>
+        </div>
+        <div class="col-6 main_img" >
+             <img src="https://cf.quizizz.com/img/mkt/1-HERO-Digital_Collage.png">
+        </div>
+    </div>
+</div>
